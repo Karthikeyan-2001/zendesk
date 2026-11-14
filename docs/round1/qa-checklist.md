@@ -21,7 +21,8 @@
 - ✅ Both names appear on the cover, the Slide 2 team strip, the Thank You slide (contacts) and the video intro. Footer on content slides also names both.
 - ✅ Export notes: MP4 / H.264 / 1080p / AAC, ffmpeg compression command included.
 - ☐ **Check Unstop's video size and length limit on the submission form** (not confirmed from public pages). Expected export ≈ 20–90 MB for 3 min.
-- ☐ Record, edit, watch once fully with sound, export as `.mp4`.
+- ✅ Recorded (1:40) and compiled: `video/out/OpsDesk_Round1_404Error.mp4`, 1920×1080, H.264/AAC, 30 fps, 9.2 MB, loudness normalised. Slides synced to speaker cuts; face-cam bottom right.
+- ☐ Watch the compiled MP4 once fully with sound before uploading.
 
 ## Repo
 - ✅ Folder structure created (README, docs/ROADMAP, DECISIONS, ASSUMPTIONS, docs/round1/*, deck/*, assets/*).

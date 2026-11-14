@@ -62,6 +62,10 @@ Same visuals and timings as above. Whoever records says all lines; the intro nam
 
 ---
 
+## Compiled video (2026-11-14 recording)
+
+`python3 video/compose_video.py <facecam.mp4>` builds `video/out/OpsDesk_Round1_404Error.mp4` (1920×1080): slide on the left, chapter rail on the right, speaker name bar at the bottom, face-cam bottom right, amber highlight on the part being discussed. Timings were synced to the recording's speaker cuts (6.8 / 10.8 / 27.5 / 56.9 / 74.8 / 92.8 s) and the pause before "Under the hood" (64.9 s). If you re-record, update `TIMELINE` in the script.
+
 ## Shot list (main 2:00 script)
 
 | # | Shot | Duration | Notes |

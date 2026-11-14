@@ -9,7 +9,7 @@
 | Round | Deliverable | Status |
 |---|---|---|
 | **1 · Idea** | 4-slide deck (Cover + 2 content + Thank You), PDF + PPTX | ✅ Built: [`deck/OpsDesk_VoyageHack_Round1.pdf`](deck/OpsDesk_VoyageHack_Round1.pdf) |
-| | Video (MP4, ~2 min) | 📝 Script ready: [`docs/round1/video-script.md`](docs/round1/video-script.md); recording pending |
+| | Video (MP4, 1:40) | ✅ Recorded and compiled with `video/compose_video.py` (slides + face-cam bottom right). The MP4 is kept out of git |
 | **2 · Prototype** | GitHub repo with working slice (Journeys A–E), docs, explainer video | ⏳ Planned: [`docs/ROADMAP.md`](docs/ROADMAP.md) |
 | **3 · Grand Finale** | Live 3–5 min demo + jury Q&A | ⏳ Planned: [`docs/ROADMAP.md#5-grand-finale-plan`](docs/ROADMAP.md#5-grand-finale-plan) |
 
@@ -45,6 +45,8 @@
 │  ├─ make_background.py      draws assets/bg-hex.png
 │  ├─ OpsDesk_VoyageHack_Round1.pptx
 │  └─ OpsDesk_VoyageHack_Round1.pdf
+├─ video/
+│  └─ compose_video.py        slides + face-cam picture-in-picture → video/out/*.mp4 (not committed)
 └─ assets/                    bg-hex.png (deck background), architecture.svg / .png (our own work only)
 ```
 
