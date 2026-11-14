@@ -1,0 +1,46 @@
+%% OpsDesk: Round 1 architecture (source for Slide 2 diagram; the slide redraws it as native shapes)
+%% Render to assets/: node deck/render_diagram.js (or paste into https://mermaid.live)
+flowchart LR
+  subgraph Client["Client"]
+    WEB["Web app<br/>Angular · role-based views<br/>(Requester · Agent · Escalation Mgr · Lead)"]
+  end
+
+  subgraph Mock["Simulated in hackathon (seed / mock boundary)"]
+    TBO["TBO systems<br/>agencies · bookings (TBOH)<br/>regional calendars · agent availability"]
+  end
+
+  subgraph Server["OpsDesk API (NestJS / Node.js)"]
+    API["REST API<br/>auth · role checks · input validation<br/>per-agency isolation"]
+    subgraph Services["Domain services"]
+      LNK["Linkage<br/>agency + TBOH + intent"]
+      RTE["Routing engine<br/>scored rules + 'why routed'"]
+      SLA["SLA engine<br/>priority + check-in/LCD"]
+      SIDE["Side-conversations<br/>explicit recipients"]
+      INS["Insights<br/>theme tagging, weekly view"]
+      EXP["Export<br/>streamed CSV / JSON"]
+    end
+  end
+
+  subgraph Data["Data path"]
+    DB[("PostgreSQL<br/>cases · links · threads<br/>audit reasons · sla_state")]
+    OUT["Outbox / event stream"]
+    RT["Realtime channel<br/>WebSocket or polling"]
+    SCALE["Scale path<br/>read replica · CDC · warehouse"]
+  end
+
+  WEB -->|HTTPS + JWT| API
+  TBO -.->|seed / import| API
+  API --> LNK & RTE & SLA & SIDE & INS & EXP
+  LNK & RTE & SLA & SIDE & INS --> DB
+  DB --> OUT --> RT --> WEB
+  EXP -->|cursor stream, no row cap| DB
+  DB -.-> SCALE
+
+  classDef mock stroke-dasharray: 5 5,fill:#FEF3C7,stroke:#F59E0B,color:#92400E
+  classDef svc fill:#E0E7FF,stroke:#6366F1,color:#1E293B
+  classDef data fill:#FFFFFF,stroke:#0B1220,color:#0B1220
+  classDef web fill:#CCFBF1,stroke:#14B8A6,color:#0F766E
+  class TBO mock
+  class LNK,RTE,SLA,SIDE,INS,EXP svc
+  class DB,OUT,RT,SCALE,API data
+  class WEB web
