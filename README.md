@@ -42,14 +42,15 @@
 │  ├─ build_deck.js           generates the PPTX (pptxgenjs)
 │  ├─ render.sh               build → PDF (LibreOffice) → PNGs for visual QA
 │  ├─ render_diagram.js       architecture.mmd → assets/architecture.{svg,png}
+│  ├─ make_background.py      draws assets/bg-hex.png
 │  ├─ OpsDesk_VoyageHack_Round1.pptx
 │  └─ OpsDesk_VoyageHack_Round1.pdf
-└─ assets/                    architecture.svg / .png (our own work only)
+└─ assets/                    bg-hex.png (deck background), architecture.svg / .png (our own work only)
 ```
 
 ## Rebuild the deck
 
-Requires Node 18+, LibreOffice (`soffice`) and Poppler (`pdftoppm`).
+Requires Node 18+, Python 3 + Pillow (background), LibreOffice (`soffice`), Poppler (`pdftoppm`) and the **Ubuntu Condensed** font installed (titles; free on Google Fonts). Body text is Arial.
 
 ```bash
 cd deck && npm install
@@ -59,7 +60,9 @@ cd deck && npm install
 ./deck/render.sh
 ```
 
-This writes the PPTX, the PDF and `deck/qa/slide-N.png` for visual checks. Edit copy in `docs/round1/slide-content.md` and `deck/build_deck.js` together.
+This writes the PPTX, the PDF and `deck/qa/slide-N.png` for visual checks. Edit copy in `docs/round1/slide-content.md` and `deck/build_deck.js` together. `python3 deck/make_background.py` regenerates `assets/bg-hex.png`.
+
+Visual theme: royal-navy "circuit" look after the SlidesCarnival *IT Software Pitch Deck* template, redrawn from scratch (see `docs/DECISIONS.md` D-013).
 
 ## Planned stack (Round 2, proposed)
 
