@@ -25,8 +25,10 @@ const CONFIG = {
   members: "Karthikeyan & Nandhini",
   date: "November 2026",
   // Fill these in before submitting (they appear on the Thank You slide).
-  contactK: "Karthikeyan · [email / LinkedIn]",
-  contactN: "Nandhini · [email / LinkedIn]",
+  contacts: [
+    { name: "Karthikeyan J", email: "karthikeyan18122001@gmail.com", linkedin: "https://in.linkedin.com/in/karthikeyanj1" },
+    { name: "Nandhini M", email: "nandhini00308@gmail.com", linkedin: "https://www.linkedin.com/in/nandhini-m-de/" },
+  ],
   outFile: path.join(__dirname, "OpsDesk_VoyageHack_Round1.pptx"),
   background: path.join(__dirname, "..", "assets", "bg-hex.png"),
 };
@@ -255,7 +257,7 @@ function edgeTraces(slide, y) {
       { text: "   ·   Date: ", options: { color: COL.soft } },
       { text: CONFIG.date, options: { breakLine: true } },
       { text: "Members: ", options: { color: COL.soft } },
-      { text: "Karthikeyan & Nandhini", options: { bold: true } },
+      { text: "Karthikeyan J & Nandhini M", options: { bold: true } },
     ],
     { x: 1.15, y: 5.4, w: 6.2, h: 1.15, fontSize: 15, valign: "middle", paraSpaceAfter: 3 },
   );
@@ -509,18 +511,23 @@ function edgeTraces(slide, y) {
     "OpsDesk replaces isolated tickets with context-rich, travel-aware operations cases: linked by agency and TBOH, routed by reality, escalated on purpose.",
     { x: 0.9, y: 2.6, w: 6.9, h: 1.3, fontSize: 19, italic: true, color: COL.soft, lineSpacingMultiple: 1.1 },
   );
-  card(s, 0.9, 4.2, 6.6, 1.3, "Contacts card", { lw: 1 });
-  text(
-    s,
-    [
-      { text: `Team ${CONFIG.team}`, options: { bold: true, color: COL.mint, breakLine: true } },
-      { text: CONFIG.contactK, options: { breakLine: true } },
-      { text: CONFIG.contactN },
-    ],
-    { x: 1.15, y: 4.25, w: 6.2, h: 1.2, fontSize: 16, valign: "middle", paraSpaceAfter: 3 },
-  );
-  s.addShape(pres.ShapeType.roundRect, { x: 0.9, y: 5.75, w: 6.6, h: 0.5, rectRadius: 0.25, fill: { color: COL.periFill }, line: { type: "none" }, objectName: "Next pill" });
-  text(s, [{ text: "What’s next: ", options: { bold: true } }, { text: "a working prototype in Round 2." }], { x: 0.9, y: 5.75, w: 6.6, h: 0.5, fontSize: 17, align: "center", valign: "middle" });
+  card(s, 0.9, 4.0, 6.6, 1.42, "Contacts card", { lw: 1 });
+  text(s, `Team ${CONFIG.team}`, { x: 1.15, y: 4.08, w: 6.1, h: 0.34, fontSize: 15, bold: true, color: COL.mint, valign: "middle" });
+  const shortUrl = (u) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  CONFIG.contacts.forEach((c, i) => {
+    const x = 1.15 + i * 3.2;
+    text(
+      s,
+      [
+        { text: c.name, options: { bold: true, fontSize: 15, breakLine: true } },
+        { text: c.email, options: { color: COL.soft, hyperlink: { url: `mailto:${c.email}` }, breakLine: true } },
+        { text: shortUrl(c.linkedin), options: { color: COL.soft, hyperlink: { url: c.linkedin } } },
+      ],
+      { x, y: 4.45, w: 3.1, h: 1.1, fontSize: 12, valign: "top", paraSpaceAfter: 4 },
+    );
+  });
+  s.addShape(pres.ShapeType.roundRect, { x: 0.9, y: 5.7, w: 6.6, h: 0.5, rectRadius: 0.25, fill: { color: COL.periFill }, line: { type: "none" }, objectName: "Next pill" });
+  text(s, [{ text: "What’s next: ", options: { bold: true } }, { text: "a working prototype in Round 2." }], { x: 0.9, y: 5.7, w: 6.6, h: 0.5, fontSize: 17, align: "center", valign: "middle" });
 }
 
 // ---------------------------------------------------------------------------

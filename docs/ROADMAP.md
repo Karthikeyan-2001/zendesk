@@ -16,7 +16,7 @@ Round 1 deadline is not yet filled in. Everything below is planned **backwards**
 |---|---|---|---|
 | **Round 1 deadline** | `<fill in>` | K | ☐ |
 | Deck copy frozen (slide-content.md) | deadline − 5 days | K + N | ☑ draft ready |
-| Contacts filled on Thank You slide, deck rebuilt | deadline − 4 days | K | ☐ |
+| Contacts filled on Thank You slide, deck rebuilt | deadline − 4 days | K | ☑ |
 | Video rehearsal ×2 with stopwatch | deadline − 3 days | K + N | ☐ |
 | Video recorded + edited + exported (MP4) | deadline − 2 days | K (edit), N (own lines) | ☐ |
 | Final QA (docs/round1/qa-checklist.md) | deadline − 1 day | N | ☐ |
@@ -230,7 +230,7 @@ State cuts honestly: e.g. "Realtime sync uses polling, not WebSockets; supplier 
 - [x] PPTX + PDF exported, visually QA'd
 - [x] Video script (main, single-narrator, 60 s cut) + shot list + export settings
 - [x] ROADMAP, DECISIONS, ASSUMPTIONS, QA checklist in repo
-- [ ] Contacts filled on Thank You slide, deck rebuilt
+- [x] Contacts filled on Thank You slide, deck rebuilt
 - [ ] Video recorded, exported as MP4 within Unstop's size limit
 - [ ] Both files uploaded on Unstop, topic "Zendesk Automation" selected
 

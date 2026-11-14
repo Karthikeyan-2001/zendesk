@@ -24,7 +24,7 @@ Content slides carry 4 cards/panels each, so each card stays within ~35-45 words
 - Title: **OpsDesk**
 - Subtitle: *Context-rich, travel-aware operations cases for TBO.*
 - Tagline (three nodes on a circuit line): Linked by agency and TBOH · Routed by reality · Escalated on purpose
-- Meta card: Topic: Zendesk Automation (OpsDesk for TBO) · Team: 404 Error · Date: November 2026 · Members: Karthikeyan & Nandhini
+- Meta card: Topic: Zendesk Automation (OpsDesk for TBO) · Team: 404 Error · Date: November 2026 · Members: Karthikeyan J & Nandhini M
 - Illustration (right, framed): case graph: **Case** node linked to Agency, TBOH, Intent and SLA clock (amber), with a "why routed: shown" tag.
 
 ## Slide 1: "From isolated tickets to connected operations"
@@ -94,7 +94,10 @@ Bottom ribbon: *Cost contrast: own a single data path vs paying per add-on / per
 
 - **Thank you!**
 - *OpsDesk replaces isolated tickets with context-rich, travel-aware operations cases: linked by agency and TBOH, routed by reality, escalated on purpose.*
-- Team 404 Error · Karthikeyan · [email / LinkedIn] · Nandhini · [email / LinkedIn]  ← **fill in `CONFIG.contactK/contactN` in `deck/build_deck.js` before final export**
+- Contacts card (from `CONFIG.contacts` in `deck/build_deck.js`; email and LinkedIn are clickable links):
+  - **Team 404 Error**
+  - **Karthikeyan J** · karthikeyan18122001@gmail.com · in.linkedin.com/in/karthikeyanj1
+  - **Nandhini M** · nandhini00308@gmail.com · linkedin.com/in/nandhini-m-de
 - Pill: **What's next:** a working prototype in Round 2.
 - Same framed case-graph illustration as the cover.
 

@@ -10,7 +10,7 @@
 - ✅ PDF and PPTX both exported. PDF embeds Ubuntu Condensed + Arial-metric Liberation Sans. Sizes: PPTX ~70 KB, PDF ~290 KB.
 - ✅ PPTX passes OOXML validation (`validate.py`: all validations passed).
 - ✅ Every claim maps to a Round 2 deliverable: traceability table in `docs/ROADMAP.md` §2 (C1–C20).
-- ☐ Fill `CONFIG.contactK` / `CONFIG.contactN` in `deck/build_deck.js` (Thank You slide currently shows `[email / LinkedIn]`), run `deck/render.sh`, re-check slide 4.
+- ✅ Contacts on the Thank You slide (Karthikeyan J, Nandhini M: email + LinkedIn, clickable); full names on the cover.
 - ☐ Open the PPTX once in PowerPoint (or Google Slides). If titles look different, Ubuntu Condensed isn't installed on that machine: install it from Google Fonts, or just submit/present the PDF.
 - ☐ Decide which file to upload (portal accepts `pdf, pptx`, one submission per team): **recommend the PDF** (fonts locked).
 
