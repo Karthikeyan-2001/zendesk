@@ -15,9 +15,9 @@
 - ☐ Decide which file to upload (portal accepts `pdf, pptx`, one submission per team): **recommend the PDF** (fonts locked).
 
 ## Video
-- ✅ Script 405 words; ≈ 2:54 at 140 wpm (3:07 at 130, 2:42 at 150). Run `python3 docs/round1/wordcount.py` after edits.
-- ✅ 60-second backup cut (133 words ≈ 0:57) and single-narrator variant (397 words ≈ 2:50) included.
-- ✅ Every line tagged K or N; K has 5 turns, N has 4; hand-offs on slide changes/highlights.
+- ✅ Script (2:00 target) 269 words; ≈ 1:55 at 140 wpm (2:04 at 130, 1:48 at 150). Run `python3 docs/round1/wordcount.py` after edits.
+- ✅ 60-second backup cut (133 words ≈ 0:57) and single-narrator variant (267 words ≈ 1:54) included.
+- ✅ Every line tagged K or N; K has 5 turns, N has 3; hand-offs on slide changes/highlights.
 - ✅ Both names appear on the cover, the Slide 2 team strip, the Thank You slide (contacts) and the video intro. Footer on content slides also names both.
 - ✅ Export notes: MP4 / H.264 / 1080p / AAC, ffmpeg compression command included.
 - ☐ **Check Unstop's video size and length limit on the submission form** (not confirmed from public pages). Expected export ≈ 20–90 MB for 3 min.
